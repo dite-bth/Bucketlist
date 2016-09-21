@@ -66,6 +66,5 @@ ARKITEKTURPRINCIPER:
 Under uppbyggnad   
 
 
-lista trick
-http://www.skateboardhere.com/skateboard-trick-list.html
+
 
