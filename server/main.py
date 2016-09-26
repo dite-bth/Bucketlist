@@ -15,7 +15,7 @@ def index():
 
 # Load default config and override config from an environment variable
 app.config.update(dict(
-    DATABASE=os.path.join(app.root_path, 'flaskr.db'),
+    DATABASE=os.path.join(app.root_path, 'database.db'),
     SECRET_KEY='development key',
     USERNAME='admin',
     PASSWORD='default'
@@ -31,7 +31,7 @@ def connect_db():
 
 def init_db():
     db = get_db()
-    with app.open_resource('schema.sql', mode='r') as f:
+    with app.open_resource('database.mwb', mode='r') as f:
         db.cursor().executescript(f.read())
     db.commit()
 
@@ -44,7 +44,7 @@ def initdb_command():
 def get_db():
     """Opens a new database connetion if there is none yet for the current application context."""
 
-    if not hasattr(g, 'sqlite_db'):
+    if not hasattr(g, 'database.mwb'):
         g.splite_db = connect_db()
         return g.splite_db
 
@@ -53,6 +53,14 @@ def close_db(error):
     """Closes the databaase again at the end of the request."""
     if hasattr(g, 'sqlite_db'):
         g.sqlite_db.close()
+
+
+@app.route('/',methods=['GET'])
+def signUp():
+    _name = request.form['iduser']
+    _email = request.form['inputEmail']
+    _password = request.form['inputPassword']
+    print
 
 
 
