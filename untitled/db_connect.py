@@ -1,14 +1,26 @@
+
+
+
+
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import sqlite3
 conn = sqlite3.connect('bucketlist.db')
+user_data = [('apa', 'apa@gmail.com'),
+                    ('apa', 'apan@gmail.com'),
+                    ('john', 'apa@gmail.com'),
+                    ('James', 'apa@gmail.com'),
+                    ('Eric', 'apa@gmail.com')]
 
+con = sqlite3.connect(":memory:")
 c = conn.cursor()
 
-# Create table
 c.execute('''CREATE TABLE user
-             (nick, email)''')
-
-# Insert a row of data
-c.execute("INSERT INTO user VALUES ('apa','apa@gmail.com')")
+             (user_id INTEGER PRIMARY KEY,
+              nick varchar(20) NOT NULL,
+              email varchar(20) NOT NULL)''')
+c.executemany('INSERT INTO user(nick, email) VALUES (?,?)', user_data)
 
 # Save (commit) the changes
 conn.commit()
