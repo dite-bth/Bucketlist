@@ -12,9 +12,3 @@ with conn:
 
     for row in rows:
         print row
-
-def getUser(uid):
-    #Gör DB-uppslag
-    return user
-
-def saveUser(user)
