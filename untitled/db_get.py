@@ -1,16 +1,20 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import sqlite3 as lite
 import sys
 
-con = lite.connect('bucketlist.db')
+conn = lite.connect('bucketlist.db')
 
-with con:
-    cur = con.cursor()
+with conn:
+    cur = conn.cursor()
+
     cur.execute("SELECT * FROM user")
 
     rows = cur.fetchall()
 
     for row in rows:
         print row
+
+def getUser(uid):
+    #Gör DB-uppslag
+    return user
+
+def saveUser(user)
