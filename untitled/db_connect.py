@@ -6,7 +6,7 @@ user_data = [('apa', 'apa@gmail.com', 'howdyhoey'),
                     ('James', 'apa@gmail.com', 'lol3'),
                     ('Eric', 'apa@gmail.com', 'lol4')]
 
-con = sqlite3.connect(":memory:")
+
 c = conn.cursor()
 
 c.execute('''CREATE TABLE if not exists user

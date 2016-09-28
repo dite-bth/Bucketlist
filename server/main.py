@@ -9,7 +9,7 @@ conn = lite.connect('bucketlist.db')
 # create our little application :)
 app = Flask(__name__)
 app.config.from_object(__name__)
-username = "john"
+username = ("SELECT nick WHERE id_user=1 FROM user")
 
 
 @app.route('/')
