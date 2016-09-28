@@ -9,6 +9,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+<<<<<<< HEAD
 @app.route('/')
 def index():
     return 'hejsan'
@@ -53,7 +54,15 @@ def close_db(error):
     """Closes the databaase again at the end of the request."""
     if hasattr(g, 'sqlite_db'):
         g.sqlite_db.close()
+=======
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+>>>>>>> master
 
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 @app.route('/',methods=['GET'])
 def signUp():
