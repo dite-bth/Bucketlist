@@ -3,6 +3,7 @@ import os, sys, json
 import sqlite3 as lite
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
+from db_get import get_user
 
 conn = lite.connect('bucketlist.db')
 
@@ -10,14 +11,6 @@ conn = lite.connect('bucketlist.db')
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-with conn:
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM user")
-
-    result = cursor.fetchall()
-    print result[1]
-    for user in result:
-        print user
 
 @app.route('/')
 def index():
@@ -25,7 +18,7 @@ def index():
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html", username=user)
+    return render_template("profile.html")
 
 
 @app.route("/main")
