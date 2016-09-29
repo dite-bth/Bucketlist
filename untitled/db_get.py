@@ -4,11 +4,11 @@ import sys
 conn = lite.connect('bucketlist.db')
 
 with conn:
-    cur = conn.cursor()
+    username = conn.cursor()
+    username.execute("SELECT nick FROM user WHERE user_id=1")
 
-    cur.execute("SELECT * FROM user")
+    username = username.fetchall()
+    json.loads(username)
 
-    rows = cur.fetchall()
-
-    for row in rows:
-        print row
+    for row in username:
+        print username
