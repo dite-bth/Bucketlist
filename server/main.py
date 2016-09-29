@@ -15,9 +15,9 @@ with conn:
     cursor.execute("SELECT * FROM user")
 
     result = cursor.fetchall()
-    print result
+    print result[1]
     for user in result:
-        print user[1]
+        print user
 
 @app.route('/')
 def index():
