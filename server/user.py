@@ -1,11 +1,13 @@
 import sqlite3 as lite
 import sys
 
+conn = lite.connect('bucketlist.db')
+
 class User:
     def __int__(self, dbcon, userid):
         self.nick = ""
         self.email = ""
-        self.dbcon = ""
+        self.dbcon = dbcon
         self.user_id = userid
 
         with self.dbcon:
@@ -16,7 +18,12 @@ class User:
             return result[1]
 
 
-        def getNick():
-            return self.nick
-        def getEmail():
-            return self.email
+    def getNick(self):
+        return self.nick
+
+    def getEmail(self):
+        return self.email
+
+
+user = User()
+print user.nick

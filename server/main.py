@@ -18,7 +18,7 @@ def index():
 
 @app.route("/profile/<int:userid>")
 def profile(userid):
-    user = User(dbcon, userid)
+    user = User(conn, userid)
     return render_template("profile.html", user=user)
 
 @app.route("/main")
