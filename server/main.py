@@ -3,7 +3,7 @@ import os, sys, json
 import sqlite3 as lite
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
-from db_get import get_user
+from user import User
 
 conn = lite.connect('bucketlist.db')
 
@@ -16,10 +16,10 @@ app.config.from_object(__name__)
 def index():
     return 'hejsan'
 
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
-
+@app.route("/profile/<userid>")
+def profile(userid):
+    user = User(dbcon, userid)
+    return render_template("profile.html", userid=userid)
 
 @app.route("/main")
 def main():
