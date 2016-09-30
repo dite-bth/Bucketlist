@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: url(sk8pic3.jpg);
+  background: url(../templates/sk8pic3.jpg);
 }
 body {
   color: #fff;
@@ -48,6 +48,7 @@ body {
   display: table-cell;
   vertical-align: top;
 }
+
 .cover-container {
   margin-right: auto;
   margin-left: auto;
