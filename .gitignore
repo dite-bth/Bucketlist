@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -209,6 +210,8 @@ $RECYCLE.BIN/
 =======
 <<<<<<< HEAD
 >>>>>>> Ida
+=======
+>>>>>>> f068550be2b619db96f7f865f8728b8e55dc5b0d
 server/.idea/**
 untitled/.idea/**
 
@@ -411,6 +414,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> master
@@ -620,3 +624,6 @@ $RECYCLE.BIN/
 *.lnk
 >>>>>>> master
 >>>>>>> Johanna
+=======
+
+>>>>>>> f068550be2b619db96f7f865f8728b8e55dc5b0d
