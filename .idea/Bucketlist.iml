@@ -6,10 +6,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
-    <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../server\templates" />
+        <option value="$MODULE_DIR$/server/templates" />
       </list>
     </option>
   </component>
