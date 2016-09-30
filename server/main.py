@@ -16,10 +16,10 @@ app.config.from_object(__name__)
 def index():
     return 'hejsan'
 
-@app.route("/profile/<userid>")
+@app.route("/profile/<int:userid>")
 def profile(userid):
     user = User(dbcon, userid)
-    return render_template("profile.html", userid=userid)
+    return render_template("profile.html", user=user)
 
 @app.route("/main")
 def main():
@@ -30,4 +30,4 @@ def signin():
     return render_template("signin/index.html")
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
