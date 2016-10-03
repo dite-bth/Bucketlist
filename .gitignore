@@ -147,6 +147,7 @@ local_settings.py
 instance/
 .webassets-cache
 
+
 # Scrapy stuff:
 .scrapy
 
