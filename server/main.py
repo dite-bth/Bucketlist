@@ -18,8 +18,8 @@ def index():
 
 @app.route("/profile/<userid>")
 def profile(userid):
-    user = User(dbcon, userid)
-    return render_template("profile.html", userid=userid)
+    user = User(userid)
+    return render_template("profile.html", user=user)
 
 @app.route("/main")
 def main():
@@ -30,4 +30,4 @@ def signin():
     return render_template("signin/index.html")
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

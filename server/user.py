@@ -1,17 +1,25 @@
+import sqlite3 as lite
+import sys
+
+
 class User:
-    def __int__(self, dbcon, userid):
+    def __init__(self, userid):
         self.nick = ""
         self.email = ""
-        self.dbcon = ""
+        self.dbcon = lite.connect('bucketlist.db')
         self.user_id = userid
 
-        with self.dbcon:
-            cursor = dbcon.cursor()
-            cursor.execute("SELECT * FROM user")
-            result = cursor.fetchall()
-            self.user_id = result[1]
+        cursor = self.dbcon.cursor()
+        cursor.execute("SELECT nick, email FROM user WHERE user_id=?", (userid,))
+        result = cursor.fetchone()
+        if result == None:
+            print "Couldn't find any user in database"
 
-        def getNick():
-            return self.nick
-        def getEmail():
-            return self.email
+        self.nick = result[0]
+        self.email = result[1]
+
+    def getNick(self):
+        return self.nick
+
+    def getEmail(self):
+        return self.email
