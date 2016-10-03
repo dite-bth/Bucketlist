@@ -16,9 +16,9 @@ app.config.from_object(__name__)
 def index():
     return 'hejsan'
 
-@app.route("/profile/<int:userid>")
+@app.route("/profile/<userid>")
 def profile(userid):
-    user = User(dbcon, userid)
+    user = User(userid)
     return render_template("profile.html", user=user)
 
 @app.route("/main")

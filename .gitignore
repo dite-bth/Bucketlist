@@ -1,6 +1,6 @@
 server/.idea/**
 untitled/.idea/**
-
+login/key.py
 # Created by https://www.gitignore.io/api/osx,pycharm,python
 
 ### OSX ###
@@ -146,6 +146,7 @@ local_settings.py
 # Flask stuff:
 instance/
 .webassets-cache
+
 
 # Scrapy stuff:
 .scrapy
