@@ -5,9 +5,7 @@ from flask_oauth import OAuth
 
 # You must configure these 3 values from Google APIs console
 # https://code.google.com/apis/console
-GOOGLE_CLIENT_ID = ''
-GOOGLE_CLIENT_SECRET = ''
-REDIRECT_URI = "/oauthcallback"  # one of the Redirect URIs from Google APIs console
+import key
 
 SECRET_KEY = 'development key'
 DEBUG = True
@@ -74,6 +72,7 @@ def authorized(resp):
 @google.tokengetter
 def get_access_token():
     return session.get('access_token')
+
 
 
 def main():
