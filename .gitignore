@@ -1,6 +1,6 @@
 server/.idea/**
 untitled/.idea/**
-login/key.py/**
+login/key.py
 # Created by https://www.gitignore.io/api/osx,pycharm,python
 
 ### OSX ###
