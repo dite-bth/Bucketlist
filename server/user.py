@@ -15,17 +15,11 @@ class User:
         if result == None:
             print "Couldn't find any user in database"
 
-        for temp in result:
-            print (temp)
-
         self.nick = result[0]
         self.email = result[1]
 
-def getNick(self):
-    return self.nick
+    def getNick(self):
+        return self.nick
 
-def getEmail(self):
-    return self.email
-
-
-user = User(1)
+    def getEmail(self):
+        return self.email
