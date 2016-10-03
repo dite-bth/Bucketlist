@@ -92,7 +92,7 @@ fabric.properties
 __pycache__/
 *.py[cod]
 *$py.class
-
+key.py
 # C extensions
 *.so
 
