@@ -5,13 +5,9 @@ from flask_oauth import OAuth
 
 # You must configure these 3 values from Google APIs console
 # https://code.google.com/apis/console
-<<<<<<< HEAD
-GOOGLE_CLIENT_ID = ''
-GOOGLE_CLIENT_SECRET = ''
-REDIRECT_URI = "/oauthcallback"  # one of the Redirect URIs from Google APIs console
-=======
+
 import key
->>>>>>> master
+
 
 SECRET_KEY = 'development key'
 DEBUG = True
