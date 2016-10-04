@@ -1,5 +1,3 @@
-from flask import Flask
-from trick import Trick
 import sqlite3 as lite
 
 
