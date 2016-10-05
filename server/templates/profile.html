@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>Bucketlist</title>
+    <title>Profile</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cover.css') }}">
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">{{ user.getNick() }}Profile</h3>
+              <h3 class="masthead-brand">{{ user.getNick(Profile) }}</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active">
