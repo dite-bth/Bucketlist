@@ -12,7 +12,7 @@ class Trick:
         if name == None:
             self.dbcon = lite.connect('bucketlist.db')
             cursor = self.dbcon.cursor()
-            cursor.execute("SELECT * FROM trikslist WHERE trick_id=?",(trickid))
+            cursor.execute("SELECT * FROM trickslist WHERE trick_id=?",(trickid))
             result = cursor.fetchone()
             self.trick_name = result[1]
         else:
@@ -21,7 +21,7 @@ class Trick:
             self.level = level
 
     def getName(self):
-        return 0
+        return self.trick_name
 
 
 
