@@ -27,8 +27,8 @@ google = oauth.remote_app('google',
                           access_token_url='https://accounts.google.com/o/oauth2/token',
                           access_token_method='POST',
                           access_token_params={'grant_type': 'authorization_code'},
-                          consumer_key=GOOGLE_CLIENT_ID,
-                          consumer_secret=GOOGLE_CLIENT_SECRET)
+                          consumer_key=key.GOOGLE_CLIENT_ID,
+                          consumer_secret=key.GOOGLE_CLIENT_SECRET)
 
 
 @app.route('/')
@@ -52,6 +52,9 @@ def index():
             return redirect(url_for('login'))
         return res.read()
 
+        return "Hurra!"
+
+
 
 
 
@@ -62,10 +65,10 @@ def login():
 
 @app.route('/oauthcallback')
 def oacallback():
-    return "1" 
+    return "1"
 
 
-@app.route(REDIRECT_URI)
+@app.route(key.REDIRECT_URI)
 @google.authorized_handler
 def authorized(resp):
     access_token = resp['access_token']
