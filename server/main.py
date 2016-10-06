@@ -32,10 +32,10 @@ def profile(userid):
         tricks.append(trick)
     return render_template("profile.html", user=user, tricks=tricks)
 
+
 @app.route("/main")
 def main():
     return render_template("main.html")
-
 @app.route("/signin")
 def signin():
     return render_template("signin/index.html")
