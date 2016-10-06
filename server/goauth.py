@@ -55,7 +55,7 @@ def index():
         return res.read()
 
     # TODO: använd res.read()
-    return render_template("main.html")
+    return render_template("profile.html")
 
 
 
