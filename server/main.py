@@ -28,6 +28,13 @@ def main():
 @app.route("/signin")
 def signin():
     return render_template("signin/index.html")
+@app.route('/tricks')
+
+def tricks():
+    con = lite.connect('bucketlist.db')
+    cursor = con.execute('SELECT trick_name FROM trickslist')
+    return render_template('tricks.html', items=cursor.fetchall())
 
 if __name__ == '__main__':
     app.run(debug=True)
+
