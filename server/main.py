@@ -33,6 +33,7 @@ def profile(userid):
     return render_template("profile.html", user=user, tricks=tricks)
 
 
+
 @app.route("/main")
 def main():
     return render_template("main.html")
