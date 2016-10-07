@@ -23,5 +23,7 @@ class Trick:
     def getName(self):
         return self.trick_name
 
+    def getUrl(self):
+        return self.trick_url
 
 
