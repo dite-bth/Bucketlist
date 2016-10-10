@@ -35,7 +35,13 @@ def main():
     return render_template("main.html")
 @app.route("/signin")
 def signin():
+<<<<<<< HEAD
+    return render_template("signin/index.html")
+
+@app.route('/tricks')
+=======
     return render_template("signin.html")
+>>>>>>> master
 
 
 if __name__ == '__main__':
