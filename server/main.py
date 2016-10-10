@@ -86,11 +86,6 @@ def profile(userid):
         tricks.append(trick)
     return render_template("profile.html", user=user, tricks=tricks)
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 @app.route("/main")
 def main():
     return render_template("main.html")
