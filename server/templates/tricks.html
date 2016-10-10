@@ -6,15 +6,23 @@
 </head>
 <body>
     <h1>HEJ</h1>
-    <table>
-        {% for trick_name in items %}
-            <tr>
-                <td>{{ trick_name }}</td>
-                <td>{{column2}}</td>
-                <td>{{column3}}</td>
-                <td>{{column4}}</td>
-            </tr>
-        {% endfor %}
-    </table>
+
+              <div class="row">
+              <div class="col-md-4">
+                  <table>
+                    {% for trick_name in items %}
+                        <tr>
+                            <td>{{ trick_name }}</td>
+                        </tr>
+                    {% endfor %}
+                  </table>
+              </div>
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4">.col-md-4</div>
+          </div>
+
+
+
+
 </body>
 </html>
