@@ -1,11 +1,7 @@
-# all the imports
 import os, sys, json
 import sqlite3 as lite
+from flask import Flask, request, session, redirect, url_for, abort, render_template, flash
 from user import User
-from trick import Trick
-from flask import Flask, request, session, g, redirect, url_for, abort, \
-     render_template, flash
-
 
 conn = lite.connect('bucketlist.db')
 
