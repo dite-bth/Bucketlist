@@ -40,6 +40,8 @@ def index():
     if access_token is None:
         return redirect(url_for('login'))
 
+
+
     access_token = access_token[0]
 
     headers = {'Authorization': 'OAuth ' + access_token}
