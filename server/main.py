@@ -28,6 +28,7 @@ def main():
 @app.route("/signin")
 def signin():
     return render_template("signin/index.html")
+
 @app.route('/tricks')
 
 def tricks():
