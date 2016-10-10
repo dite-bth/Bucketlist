@@ -1,13 +1,17 @@
-from flask import Flask, redirect, url_for, session
+# -*- coding: utf-8 -*-
+from flask import Flask, redirect, url_for, session, render_template
 from flask_oauth import OAuth
+from urllib2 import Request, urlopen, URLError
 
 
 
 # You must configure these 3 values from Google APIs console
 # https://code.google.com/apis/console
-GOOGLE_CLIENT_ID = '43138052863-aqqjblmd6v5dj8fsg5umpo9e6ek8jk71.apps.googleusercontent.com'
-GOOGLE_CLIENT_SECRET = 'sNUu5ea7wiWtvjxzTm-_-4Xn'
-REDIRECT_URI = "/oauthcallback"  # one of the Redirect URIs from Google APIs console
+
+import key
+
+
+
 
 SECRET_KEY = 'development key'
 DEBUG = True
@@ -26,8 +30,8 @@ google = oauth.remote_app('google',
                           access_token_url='https://accounts.google.com/o/oauth2/token',
                           access_token_method='POST',
                           access_token_params={'grant_type': 'authorization_code'},
-                          consumer_key=GOOGLE_CLIENT_ID,
-                          consumer_secret=GOOGLE_CLIENT_SECRET)
+                          consumer_key=key.GOOGLE_CLIENT_ID,
+                          consumer_secret=key.GOOGLE_CLIENT_SECRET)
 
 
 @app.route('/')
@@ -37,7 +41,6 @@ def index():
         return redirect(url_for('login'))
 
     access_token = access_token[0]
-    from urllib2 import Request, urlopen, URLError
 
     headers = {'Authorization': 'OAuth ' + access_token}
     req = Request('https://www.googleapis.com/oauth2/v1/userinfo',
@@ -51,6 +54,8 @@ def index():
             return redirect(url_for('login'))
         return res.read()
 
+    # TODO: använd res.read()
+    return render_template("main.html")
 
 
 
@@ -59,11 +64,8 @@ def login():
     callback = url_for('authorized', _external=True)
     return google.authorize(callback=callback)
 
-@app.route('/oauthcallback')
-def oacallback():
-    return "1"
 
-@app.route(REDIRECT_URI)
+@app.route(key.REDIRECT_URI)
 @google.authorized_handler
 def authorized(resp):
     access_token = resp['access_token']
@@ -74,6 +76,7 @@ def authorized(resp):
 @google.tokengetter
 def get_access_token():
     return session.get('access_token')
+
 
 
 def main():
