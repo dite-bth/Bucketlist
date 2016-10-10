@@ -1,5 +1,7 @@
-from flask import Flask, redirect, url_for, session
+# -*- coding: utf-8 -*-
+from flask import Flask, redirect, url_for, session, render_template
 from flask_oauth import OAuth
+from urllib2 import Request, urlopen, URLError
 
 
 
@@ -7,6 +9,7 @@ from flask_oauth import OAuth
 # https://code.google.com/apis/console
 
 import key
+
 
 
 
@@ -38,7 +41,6 @@ def index():
         return redirect(url_for('login'))
 
     access_token = access_token[0]
-    from urllib2 import Request, urlopen, URLError
 
     headers = {'Authorization': 'OAuth ' + access_token}
     req = Request('https://www.googleapis.com/oauth2/v1/userinfo',
@@ -52,9 +54,8 @@ def index():
             return redirect(url_for('login'))
         return res.read()
 
-        return "Hurra!"
-
-
+    # TODO: använd res.read()
+    return render_template("profile.html")
 
 
 
@@ -62,10 +63,6 @@ def index():
 def login():
     callback = url_for('authorized', _external=True)
     return google.authorize(callback=callback)
-
-@app.route('/oauthcallback')
-def oacallback():
-    return "1"
 
 
 @app.route(key.REDIRECT_URI)
