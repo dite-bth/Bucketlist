@@ -40,6 +40,8 @@ def index():
     if access_token is None:
         return redirect(url_for('login'))
 
+
+
     access_token = access_token[0]
 
     headers = {'Authorization': 'OAuth ' + access_token}
@@ -55,7 +57,7 @@ def index():
         return res.read()
 
     # TODO: använd res.read()
-    return render_template("main.html")
+    return render_template("profile.html")
 
 
 
