@@ -2,6 +2,7 @@ server/.idea/**
 untitled/.idea/**
 server/key.py
 .idea/**
+login/.idea/**
 
 # Created by https://www.gitignore.io/api/osx,pycharm,python,windows,git
 

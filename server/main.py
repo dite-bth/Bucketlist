@@ -15,7 +15,7 @@ import key
 
 
 
-# create our little application :)
+# create our little application 🙂
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -89,6 +89,7 @@ def profile(userid):
 @app.route("/main")
 def main():
     return render_template("main.html")
+
 @app.route("/signin")
 def signin():
     return render_template("signin.html")
