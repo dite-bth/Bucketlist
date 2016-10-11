@@ -91,7 +91,7 @@ def main():
     return render_template("main.html")
 @app.route("/signin")
 def signin():
-    return render_template("signin/index.html")
+    return render_template("signin.html")
 
 @app.route('/login')
 def login():
