@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 # all the imports
 import os, sys, json
@@ -9,17 +8,11 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
 from flask_oauth import OAuth
 from urllib2 import Request, urlopen, URLError
-
-
-
-
 import key
-=======
-import os, sys, json
-import sqlite3 as lite
-from flask import Flask, request, session, redirect, url_for, abort, render_template, flash
-from user import User
->>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
+
+
+
+
 
 
 # create our little application 🙂
@@ -46,8 +39,6 @@ google = oauth.remote_app('google',
                           consumer_key=key.GOOGLE_CLIENT_ID,
                           consumer_secret=key.GOOGLE_CLIENT_SECRET)
 
-
-
 conn = lite.connect('bucketlist.db')
 
 
@@ -55,9 +46,10 @@ conn = lite.connect('bucketlist.db')
 
 @app.route('/')
 def index():
-    return 'hejsan'
+    return render_template("main.html")
 
-@app.route('/googlelogin')
+
+@app.route("/googlelogin")
 def googlelogin():
     access_token = session.get('access_token')
     if access_token is None:
@@ -76,7 +68,7 @@ def googlelogin():
             session.pop('access_token', None)
             return redirect(url_for('login'))
         return res.read()
-
+        #'(INSERT res.read INTO user VALUES (value1,value2,value3))'
     # TODO: använd res.read()
     return render_template("main.html")
 
@@ -94,24 +86,30 @@ def profile(userid):
         tricks.append(trick)
     return render_template("profile.html", user=user, tricks=tricks)
 
-
-
 @app.route("/main")
 def main():
     return render_template("main.html")
 @app.route("/signin")
 def signin():
-<<<<<<< HEAD
     return render_template("signin/index.html")
-<<<<<<< HEAD
-=======
 
-@app.route('/tricks')
-=======
-    return render_template("signin.html")
->>>>>>> master
+@app.route('/login')
+def login():
+    callback = url_for('authorized', _external=True)
+    return google.authorize(callback=callback)
 
->>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
+
+@app.route(key.REDIRECT_URI)
+@google.authorized_handler
+def authorized(resp):
+    access_token = resp['access_token']
+    session['access_token'] = access_token, ''
+    return redirect(url_for('index'))
+
+
+@google.tokengetter
+def get_access_token():
+    return session.get('access_token')
 
 if __name__ == '__main__':
     app.run(debug=True)
