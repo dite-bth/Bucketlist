@@ -1,7 +1,9 @@
 server/.idea/**
 untitled/.idea/**
 server/key.py
-# Created by https://www.gitignore.io/api/osx,pycharm,python
+.idea/**
+
+# Created by https://www.gitignore.io/api/osx,pycharm,python,windows,git
 
 ### OSX ###
 *.DS_Store
@@ -39,9 +41,6 @@ Temporary Items
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -147,7 +146,6 @@ local_settings.py
 instance/
 .webassets-cache
 
-
 # Scrapy stuff:
 .scrapy
 
@@ -180,7 +178,6 @@ ENV/
 # Rope project settings
 .ropeproject
 
-# Created by https://www.gitignore.io/api/windows
 
 ### Windows ###
 # Windows image file caches
@@ -201,3 +198,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+### Git ###
+*.orig
