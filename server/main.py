@@ -68,7 +68,7 @@ def googlelogin():
             session.pop('access_token', None)
             return redirect(url_for('login'))
         return res.read()
-
+        #'(INSERT res.read INTO user VALUES (value1,value2,value3))'
     # TODO: använd res.read()
     return render_template("main.html")
 
