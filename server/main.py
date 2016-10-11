@@ -15,7 +15,6 @@ import key
 
 
 
-
 # create our little application 🙂
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -93,8 +92,7 @@ def main():
 
 @app.route("/signin")
 def signin():
-
-   return render_template("signin.html")
+    return render_template("signin.html")
 
 @app.route('/login')
 def login():
@@ -108,7 +106,6 @@ def authorized(resp):
     access_token = resp['access_token']
     session['access_token'] = access_token, ''
     return redirect(url_for('index'))
-
 
 
 @google.tokengetter
