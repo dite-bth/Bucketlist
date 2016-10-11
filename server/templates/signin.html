@@ -7,6 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name = "google-signin-client_id" content = " 43138052863-aqqjblmd6v5dj8fsg5umpo9e6ek8jk71.apps.googleusercontent.com138052863- ">
 
 
     <title>Signin Template</title>
@@ -62,14 +63,18 @@
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                 <h2>Or use your google account</h2>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Google</button>
+
               </form>
+            <form action="/googlelogin">
+                <input type="submit" value="Go to Google" />
+            </form>
 
-        </div> <!-- /container -->
+        </div>
     </div>
     </div>
     </div>
-
+     <!--google log in -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
