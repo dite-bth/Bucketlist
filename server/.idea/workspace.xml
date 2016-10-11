@@ -18,7 +18,11 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/server$main.coverage" NAME="main Coverage Results" MODIFIED="1475580311010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/server$server.coverage" NAME="server Coverage Results" MODIFIED="1475580040557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/server$trick.coverage" NAME="trick Coverage Results" MODIFIED="1476104495559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <SUITE FILE_PATH="coverage/server$trick.coverage" NAME="trick Coverage Results" MODIFIED="1475750786021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
     <SUITE FILE_PATH="coverage/server$user.coverage" NAME="user Coverage Results" MODIFIED="1475583357036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/server$flaskr.coverage" NAME="flaskr Coverage Results" MODIFIED="1474628918324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Dropbox/digital infrastruktur/flasktest/Flaskr" />
     <SUITE FILE_PATH="coverage/server$yolo.coverage" NAME="yolo Coverage Results" MODIFIED="1474616412495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/gas" />
@@ -31,6 +35,7 @@
     <favorites_list name="server" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
@@ -39,6 +44,16 @@
               <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <marker date="1476099723008" expanded="true" signature="2227:2251" ph="SELECT * FRO... trickslist" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="goauth.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goauth.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="789">
+              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+              <folding>
+                <element signature="e#24#92#0" expanded="true" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
               </folding>
             </state>
           </provider>
@@ -129,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -139,6 +155,9 @@
           </PATH>
         </subPane>
       </pane>
+=======
+      <pane id="Scratches" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,12 +173,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
+<<<<<<< HEAD
+=======
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,8 +575,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-9" y="-9" width="1384" height="736" extended-state="6" />
     <editor active="false" />
+=======
+    <frame x="-9" y="-9" width="1384" height="736" extended-state="7" />
+    <editor active="true" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17057101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -535,7 +589,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4657763" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.046744574" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -567,6 +625,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/goauth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -574,12 +633,19 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
+<<<<<<< HEAD
             <marker date="1476099723008" expanded="true" signature="2227:2251" ph="SELECT * FRO... trickslist" />
+=======
+            <element signature="e#18#38#0" expanded="true" />
+            <marker date="1475746643677" expanded="true" signature="759:792" ph="SELECT trick... trickslist" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
           </folding>
         </state>
       </provider>
@@ -588,6 +654,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <marker date="1475496346844" expanded="true" signature="270:314" ph="SELECT nick,... user" />
+          </folding>
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
         </state>
       </provider>
     </entry>
@@ -595,6 +668,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
         </state>
       </provider>
     </entry>
@@ -602,6 +679,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
         </state>
       </provider>
     </entry>
@@ -641,6 +722,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
         </state>
       </provider>
     </entry>
@@ -655,6 +740,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
         </state>
       </provider>
     </entry>
@@ -662,6 +751,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -685,6 +775,32 @@
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <marker date="1476099723008" expanded="true" signature="2227:2251" ph="SELECT * FRO... trickslist" />
+=======
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <marker date="1475496346844" expanded="true" signature="270:314" ph="SELECT nick,... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#18#38#0" expanded="true" />
+            <marker date="1475746643677" expanded="true" signature="759:792" ph="SELECT trick... trickslist" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goauth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#92#0" expanded="true" />
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
           </folding>
         </state>
       </provider>

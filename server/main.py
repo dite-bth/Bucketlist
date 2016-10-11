@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 # all the imports
 import os, sys, json
@@ -13,6 +14,12 @@ from urllib2 import Request, urlopen, URLError
 
 
 import key
+=======
+import os, sys, json
+import sqlite3 as lite
+from flask import Flask, request, session, redirect, url_for, abort, render_template, flash
+from user import User
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
 
 
 # create our little application 🙂
@@ -94,7 +101,17 @@ def main():
     return render_template("main.html")
 @app.route("/signin")
 def signin():
+<<<<<<< HEAD
     return render_template("signin/index.html")
+<<<<<<< HEAD
+=======
+
+@app.route('/tricks')
+=======
+    return render_template("signin.html")
+>>>>>>> master
+
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
 
 if __name__ == '__main__':
     app.run(debug=True)

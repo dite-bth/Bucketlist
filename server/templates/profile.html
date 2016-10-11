@@ -26,6 +26,10 @@
 
   </head>
 
+  <body>
+
+    <div class="bg"></div>
+    
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -34,12 +38,21 @@
 
           <div class="masthead clearfix">
             <div class="inner">
+<<<<<<< HEAD
               <h3 class="masthead-brand">{{ user.getNick() }}</h3>
+=======
+<<<<<<< HEAD
+              <h3 class="masthead-brand">{{ user.getNick() }}</h3>
+=======
+
+              <h3 class="masthead-brand">{{ user.getNick() }}</h3>
+
+>>>>>>> master
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active">
-                  <li><a href="#">Register</a></li>
-                    <li><a href="file:///Users/idaekholm/Desktop/Bucketlist/server/templates/signin/index.html">Sign in</a></li>
+                    <li><a href="/main">Sign out</a></li>
                   </ul>
               </nav>
             </div>
@@ -53,6 +66,21 @@
             </p>
           </div>
 
+            <div class="row">
+            <div class="col-md-4">
+              <table>
+                {% for trick in tricks %}
+                    <tr>
+                        <td>{{ trick.getName() }}</td>
+                        <td><a href="{{ trick.getUrl() }}">Videoklipp</a></td>
+                    </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+            </div>
+
           <div class="mastfoot">
 
           </div>
@@ -63,6 +91,7 @@
 
     </div>
 
+<<<<<<< HEAD
 <div class="row">
 <div class="col-md-4">
   <table>
@@ -77,6 +106,9 @@
 <div class="col-md-4">.col-md-4</div>
 <div class="col-md-4">.col-md-4</div>
 </div>
+=======
+   </body>
+>>>>>>> bee3d09d9463fc7dfb00d8b1f4cecc9cc0040046
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
