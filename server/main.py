@@ -10,9 +10,6 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 
-@app.route('/')
-def index():
-    return 'hejsan'
 
 @app.route("/profile/<userid>")
 def profile(userid):
@@ -32,12 +29,20 @@ def profile(userid):
 @app.route("/tricks")
 def tricks():
     return render_template("tricks.html")
-@app.route("/main")
+@app.route("/")
 def main():
     return render_template("main.html")
 @app.route("/signin")
 def signin():
     return render_template("signin.html")
+
+
+@app.route('/login')
+def login():
+    callback = url_for('authorized', _external=True)
+    return google.authorize(callback=callback)
+
+
 
 
 if __name__ == '__main__':
