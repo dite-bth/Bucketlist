@@ -8,6 +8,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
 from flask_oauth import OAuth
 from urllib2 import Request, urlopen, URLError
+from wtforms import Form, StringField, SubmitField
 import key
 
 
@@ -90,9 +91,33 @@ def profile(userid):
 def main():
     return render_template("main.html")
 
-@app.route("/signin")
-def signin():
-    return render_template("signin.html")
+# route for handling the login page logic
+@app.route('/signin', methods=['GET', 'POST'])
+def ssignin():
+    if request.method== 'GET':
+        return render_template('signin.html')
+    if request.method == 'POST':
+        if request.form['nick'] == "" or request.form['password'] == "":
+            error = 'Invalid Credentials. Please try again.'
+            print("här!")
+            return redirect(url_for('main'))
+
+        nick = request.form['nick']
+        password = request.form['password']
+        print(nick)
+        conn = lite.connect('bucketlist.db')
+        cur = conn.cursor()
+        result = cur.execute("SELECT * FROM user WHERE nick=?", (nick,))
+        if not result:
+            return redirect(url_for('main'))
+
+        result = cur.execute("SELECT * FROM user WHERE password=?", (password,))
+        result.fetchone()
+        if not result:
+            return redirect(url_for('main'))
+
+        conn.close()
+    return render_template('profile.html')
 
 @app.route('/login')
 def login():
