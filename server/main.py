@@ -77,18 +77,25 @@ def profile(userid):
     user = User(userid)
     con = lite.connect('bucketlist.db')
     con.text_factory = str
-    cursor = con.execute('SELECT * FROM trickslist')
-
-
+    cursor = con.execute('SELECT * FROM trickslist WHERE trick_type = "flip"')
     result = cursor.fetchall()
-    tricks = list()
-    print result[0][3]
-
+    flip_tricks = list()
     for item in result:
         trick = Trick(item[0], item[1], item[2], item[3])
-        tricks.append(trick)
-        print(item)
-    return render_template("profile.html", user=user, tricks=tricks)
+        flip_tricks.append(trick)
+    cursor = con.execute('SELECT * FROM trickslist WHERE trick_type = "grind"')
+    result = cursor.fetchall()
+    grind_tricks = list()
+    for item in result:
+        trick = Trick(item[0], item[1], item[2], item[3])
+        grind_tricks.append(trick)
+    cursor = con.execute('SELECT * FROM trickslist WHERE trick_type = "grab"')
+    result = cursor.fetchall()
+    grab_tricks = list()
+    for item in result:
+        trick = Trick(item[0], item[1], item[2], item[3])
+        grab_tricks.append(trick)
+    return render_template("profile.html", user=user, flip_tricks=flip_tricks, grind_tricks=grind_tricks, grab_tricks=grab_tricks)
 
 @app.route("/main")
 def main():
