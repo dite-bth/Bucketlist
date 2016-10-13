@@ -78,12 +78,16 @@ def profile(userid):
     con = lite.connect('bucketlist.db')
     con.text_factory = str
     cursor = con.execute('SELECT * FROM trickslist')
+
+
     result = cursor.fetchall()
     tricks = list()
-    print result
+    print result[0][3]
+
     for item in result:
         trick = Trick(item[0], item[1], item[2], item[3])
         tricks.append(trick)
+        print(item)
     return render_template("profile.html", user=user, tricks=tricks)
 
 @app.route("/main")

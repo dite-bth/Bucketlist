@@ -62,8 +62,9 @@
             <div class="col-md-4">
               <table>
                 {% for trick in tricks %}
+
                     <tr>
-                        <td>{{ trick.getName() }}</td>
+                        <td>{{ trick.getName('flip') }}</td>
                         <td><a href="{{ trick.getUrl() }}">Videoklipp</a></td>
                     </tr>
                 {% endfor %}

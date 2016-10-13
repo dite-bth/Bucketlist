@@ -20,8 +20,23 @@ class Trick:
             self.trick_url = url
             self.trick_type = trick_type
 
-    def getName(self):
+
+        if trick_type == 'flip':
+            self.dbcon = lite.connect('bucketlist.db')
+            cursor = self.dbcon.cursor()
+            cursor.execute("SELECT trick_name FROM trickslist WHERE trick_type='flip'")
+            result2 = cursor.fetchall()
+            self.trick_name = result2[0]
+
+
+
+
+
+    def getName(self, trick_type):
         return self.trick_name
 
     def getUrl(self):
         return self.trick_url
+
+    def getType(self):
+        return self.trick_type
