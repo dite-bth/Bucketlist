@@ -1,13 +1,12 @@
 html,
 body {
   height: 100%;
-
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 .bg {
-     background: url(../static/sk8pic3.jpg);
+  background: url(../static/sk8pic3.jpg);
   opacity: 0.5;
   top: 0;
   left: 0;

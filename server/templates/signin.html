@@ -7,19 +7,20 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name = "google-signin-client_id" content = " 43138052863-aqqjblmd6v5dj8fsg5umpo9e6ek8jk71.apps.googleusercontent.com138052863- ">
+<<<<<<< HEAD
+=======
+    <meta name = "google-signin-client_id" content = "../server/key.py">
+>>>>>>> adb2715ed9ec7acd2f8dc2996740efdaf8ff6c49
 
 
     <title>Signin Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cover.css') }}">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../../static/signin.css" rel="stylesheet">
+    <link href="../static/cover.css" rel="stylesheet">
+
 
 
   </head>
@@ -50,21 +51,26 @@
                   </div>
                 </div>
 
-              <form class="form-signin">
                 <h2 class="form-signin-heading">Please sign in</h2>
-                <label for="inputEmail" class="sr-only"></label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputPassword" class="sr-only"></label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+
+                <form action="/signin" method="post">
+                <input type="text" placeholder="name" name="nick" value="{{
+                request.form.nick }}">
+                <input type="password" placeholder="Password" name="password" value="{{
+                request.form.password }}">
+                <input class="btn btn-default" type="submit" value="Login">
+                </form>
+
+                {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
+
                 <h2>Or use your google account</h2>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
-              </form>
+
+            <form action="/googlelogin">
+                <input type="submit" value="Go to Google" />
+            </form>
 
         </div>
     </div>
@@ -72,7 +78,5 @@
     </div>
      <!--google log in -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
