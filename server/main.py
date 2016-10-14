@@ -12,6 +12,10 @@ import key
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 
 

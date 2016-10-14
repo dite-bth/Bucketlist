@@ -3,10 +3,10 @@ import sys
 
 
 class Trick:
-    def __init__(self, trickid, name=None, url=None, level=None):
+    def __init__(self, trickid, name=None, url=None, trick_type=None):
         self.trick_name = ""
         self.trick_url = ""
-        self.level = ""
+        self.trick_type = ""
         self.trick_id = trickid
 
         if name == None:
@@ -18,12 +18,10 @@ class Trick:
         else:
             self.trick_name = name
             self.trick_url = url
-            self.level = level
+            self.trick_type = trick_type
 
     def getName(self):
         return self.trick_name
 
     def getUrl(self):
         return self.trick_url
-
-

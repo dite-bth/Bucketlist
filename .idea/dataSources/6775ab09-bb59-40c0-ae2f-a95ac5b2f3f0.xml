@@ -18,7 +18,7 @@
       <mandatory>1</mandatory>
       <data-type>VARCHAR(255)(0,-1)|12</data-type>
     </column>
-    <column id="7" parent="2" name="level">
+    <column id="7" parent="2" name="trick_type">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
