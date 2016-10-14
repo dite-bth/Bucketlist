@@ -56,8 +56,13 @@ def index():
             return redirect(url_for('login'))
         return res.read()
 
-    # TODO: använd res.read()
-    return render_template("profile.html")
+
+        #försök göra en tokenvariabel. För att sedan kunna skicka vidare token.
+
+        #token = res.read()
+
+     # TODO: använd res.read()
+    return render_template("main.html")
 
 
 
