@@ -5,7 +5,7 @@ import sqlite3 as lite
 from user import User
 from trick import Trick
 from flask import Flask, request, session, g, redirect, url_for, abort, \
-     render_template, flash
+     render_template, flash, json
 from flask_oauth import OAuth
 from urllib2 import Request, urlopen, URLError
 import key
@@ -49,6 +49,7 @@ def index():
     return render_template("main.html")
 
 
+
 @app.route("/googlelogin")
 def googlelogin():
     access_token = session.get('access_token')
@@ -68,8 +69,28 @@ def googlelogin():
             session.pop('access_token', None)
             return redirect(url_for('login'))
         return res.read()
-        #'(INSERT res.read INTO user VALUES (value1,value2,value3))'
-    # TODO: använd res.read()
+    jsondata = json.loads(res.read())
+    email = jsondata['email']
+    print email
+
+    #printar ut email i jsonsträng.
+
+   #databaskoppling
+    conn = lite.connect('bucketlist.db')
+    c = conn.cursor()
+    c.execute("INSERT INTO user (email,nick,password) VALUES (?,?,?)",(email,'NULL','NULL'))
+    conn.commit()
+    conn.close()
+
+
+
+
+
+
+
+    #connect med db. if token exist ->main.html. else -> lagra i db -> create nick + lagra nick.
+
+
     return render_template("main.html")
 
 @app.route("/profile/<userid>")
