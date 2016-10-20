@@ -6,11 +6,12 @@ class User:
     def __init__(self, userid):
         self.nick = ""
         self.email = ""
+        self.password = ""
         self.dbcon = lite.connect('bucketlist.db')
         self.user_id = userid
 
         cursor = self.dbcon.cursor()
-        cursor.execute("SELECT nick, email FROM user WHERE user_id=?", (userid,))
+        cursor.execute("SELECT nick, email, password FROM user WHERE user_id=?", (userid,))
         result = cursor.fetchone()
         if result == None:
             print "Couldn't find any user in database"
@@ -23,3 +24,6 @@ class User:
 
     def getEmail(self):
         return self.email
+
+    def getPassword(self):
+        return self.password

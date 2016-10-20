@@ -126,33 +126,34 @@ def profile(userid):
 def main():
     return render_template("main.html")
 
-# route for handling the login page logic
+
 @app.route('/signin', methods=['GET', 'POST'])
-def ssignin():
+def signin():
     if request.method== 'GET':
-        return render_template('signin.html')
-    if request.method == 'POST':
-        if request.form['nick'] == "" or request.form['password'] == "":
-            error = 'Invalid Credentials. Please try again.'
-            print("här!")
-            return redirect(url_for('main'))
-
-        nick = request.form['nick']
-        password = request.form['password']
-        print(nick)
+        return render_template("signin.html")
+    elif request.method == 'POST':
         conn = lite.connect('bucketlist.db')
+        conn.text_factory = str
         cur = conn.cursor()
-        result = cur.execute("SELECT * FROM user WHERE nick=?", (nick,))
+        if request.form['email'] == "" or request.form['password'] == "":
+            return redirect(url_for('register'))
+        email = request.form['email']
+        password = request.form['password']
+        print('email')
+        cur.execute("SELECT * FROM user WHERE email=?", (email,))
+        result = cur.fetchone()
         if not result:
+            conn.close()
+            error = 'Invalid Credentials. Please try again.'
+            return redirect(url_for('main'))
+        if password == result[3]:
+            conn.close()
+            return redirect("profile.html/%s" % (result[0],))
+        else:
+            conn.close()
+            error = 'Invalid Credentials. Please try again.'
             return redirect(url_for('main'))
 
-        result = cur.execute("SELECT * FROM user WHERE password=?", (password,))
-        result.fetchone()
-        if not result:
-            return redirect(url_for('main'))
-
-        conn.close()
-    return render_template('profile.html')
 
 @app.route('/login')
 def login():
