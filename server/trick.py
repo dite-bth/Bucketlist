@@ -25,6 +25,9 @@ class Trick:
 
     def getUrl(self):
         return self.trick_url
+<<<<<<< HEAD
+=======
 
     def getType(self):
         return self.trick_type
+>>>>>>> master
