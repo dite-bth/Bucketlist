@@ -60,34 +60,40 @@
 
             <div class="row">
             <div class="col-md-4">
+            <div id="one">
               <table>
                 {% for trick in flip_tricks %}
                     <tr>
-                        <td>{{ trick.getName() }}</td>
-                        <td><a href="{{ trick.getUrl() }}"> Videoklipp</a></td>
+                        <td class="text"><input type="checkbox" name="Trick" value="flip">{{ trick.getName() }}</td>
+                        <td class="video"><a href="{{ trick.getUrl() }}"> Videoklipp</a></td>
                     </tr>
                 {% endfor %}
               </table>
             </div>
+            </div>
             <div class="col-md-4">
+            <div id="two">
                 <table>
                 {% for trick in grind_tricks %}
                     <tr>
-                        <td>{{ trick.getName() }}</td>
-                        <td><a href="{{ trick.getUrl() }}"> Videoklipp</a></td>
+                        <td class="text"><input type="checkbox" name="Trick" value="grind">{{ trick.getName() }}</td>
+                        <td class="video"><a href="{{ trick.getUrl() }}"> Videoklipp</a></td>
                     </tr>
                 {% endfor %}
                 </table>
             </div>
+            </div>
             <div class="col-md-4">
+            <div id="three">
                 <table>
                 {% for trick in grab_tricks %}
                     <tr>
-                        <td>{{ trick.getName() }}</td>
-                        <td><a href="{{ trick.getUrl() }}"> Videoklipp</a></td>
+                        <td class="text"><input type="checkbox" name="Trick" value="grab">{{ trick.getName() }}</td>
+                        <td class="video"><a href="{{ trick.getUrl() }}"> Videoklipp</a></td>
                     </tr>
                 {% endfor %}
                 </table>
+            </div>
             </div>
             </div>
 

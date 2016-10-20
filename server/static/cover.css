@@ -12,7 +12,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -165,3 +165,45 @@ a:hover {
     width: 700px;
   }
 }
+
+#one{
+
+  color: #000000;
+  background: rgba(230, 230, 230, 0.4);
+  border-radius: 15px;
+  border: 2px solid #000000;
+  padding: auto;
+  text-align: center;
+  margin-top: 5px;
+
+}
+#two{
+  padding: auto;
+  color: #000000;
+  background: rgba(230, 230, 230, 0.4);
+  border-radius: 15px;
+  border: 2px solid #000000;
+  text-align: center;
+  margin-top: 5px;
+
+
+}
+#three{
+  padding: auto;
+  color: #000000;
+  background: rgba(230, 230, 230, 0.4);
+  border-radius: 15px;
+  border: 2px solid #000000;
+  text-align: center;
+  margin-top: 5px;
+}
+.text{
+  text-align: left;
+  line-height: 20px;
+  padding-left: 10px;
+}
+.video{
+  padding-left: 10px;
+}
+
+
