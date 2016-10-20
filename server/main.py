@@ -75,23 +75,24 @@ def googlelogin():
 
     #printar ut email i jsonsträng.
 
-   #databaskoppling
+    #Ny kod:
+
+    email = request.form['email']
+    print(email)
     conn = lite.connect('bucketlist.db')
-    c = conn.cursor()
-    c.execute("INSERT INTO user (email,nick,password) VALUES (?,?,?)",(email,'NULL','NULL'))
-    conn.commit()
-    conn.close()
+    cur = conn.cursor()
+    result = cur.execute("SELECT * FROM user WHERE email=?", (email,))
+    if not result:
 
+       #databaskoppling
+        conn = lite.connect('bucketlist.db')
+        c = conn.cursor()
+        c.execute("INSERT INTO user (email,nick,password) VALUES (?,?,?)",(email,'NULL','NULL'))
+        conn.commit()
+        conn.close()
 
+    return render_template("googlelogin.html")
 
-
-
-
-
-    #connect med db. if token exist ->main.html. else -> lagra i db -> create nick + lagra nick.
-
-
-    return render_template("main.html")
 
 @app.route("/profile/<userid>")
 def profile(userid):
