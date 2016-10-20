@@ -1,8 +1,12 @@
 server/.idea/**
 untitled/.idea/**
+<<<<<<< HEAD
 server/key.py
+=======
+server/key.py**
 .idea/**
 login/.idea/**
+>>>>>>> master
 
 # Created by https://www.gitignore.io/api/osx,pycharm,python,windows,git
 
@@ -202,4 +206,8 @@ $RECYCLE.BIN/
 
 
 ### Git ###
+<<<<<<< HEAD
 *.orig
+=======
+*.orig
+>>>>>>> master
