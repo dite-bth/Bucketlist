@@ -136,10 +136,9 @@ def signin():
         conn.text_factory = str
         cur = conn.cursor()
         if request.form['email'] == "" or request.form['password'] == "":
-            return redirect(url_for('register'))
+            return redirect(url_for('signin'))
         email = request.form['email']
         password = request.form['password']
-        print('email')
         cur.execute("SELECT * FROM user WHERE email=?", (email,))
         result = cur.fetchone()
         if not result:
@@ -148,7 +147,7 @@ def signin():
             return redirect(url_for('main'))
         if password == result[3]:
             conn.close()
-            return redirect("profile.html/%s" % (result[0],))
+            return redirect("profile/%s" % (result[0],))
         else:
             conn.close()
             error = 'Invalid Credentials. Please try again.'
